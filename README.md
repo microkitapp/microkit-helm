@@ -32,16 +32,13 @@ openssl rand -base64 32
 
 2. Edit the `values.yaml` file:
 
-Use your preferred text editor to open the `values.yaml` file generated earlier.
-
-3. Locate the `aes_key` value within the `values.yaml` file.
-
-4. Replace the existing `aes_key` value with the newly generated encryption key.
-
-For example, you can use the `sed` command to automate this process:
-
+Run those command in the 
 ```bash
-sed -i '' "s|aes_key.*|aes_key\: YOUR_NEW_ENCRYPTION_KEY|" values.yaml
+sed -i '' "s|aes_key.*|aes_key\: $(openssl rand -base64 32)|" values.yaml
+
+sed -i '' "s|password: postgres|password\: $(openssl rand -base64 24)|" values.yaml
+
+sed -i '' "s|password: redis|password\: $(openssl rand -base64 24)|" values.yaml
 ```
 
 Replace `YOUR_NEW_ENCRYPTION_KEY` with the encryption key generated in step 1.
