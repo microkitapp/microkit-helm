@@ -20,15 +20,11 @@ helm show values microkit/microkit > values.yaml
 
 This command will generate a `values.yaml` file in your current directory, containing the default configuration values for the MicroKit chart.
 
-## Customizing Encryption Key
+## Edit values.yaml And Customizing Secrets
 
-The MicroKit Helm chart uses an encryption key for secure communication. You can customize this key by following these steps:
+The MicroKit Helm chart uses an encryption key for secure your data. You can customize this key and other secrets by following these steps:
 
-1. Generate a new encryption key using the `openssl` command:
 
-```bash
-openssl rand -base64 32
-```
 
 2. Edit the `values.yaml` file:
 
