@@ -26,7 +26,7 @@ The MicroKit Helm chart uses an encryption key for secure your data. You can cus
 
 
 
-2. Edit the `values.yaml` file:
+Edit the `values.yaml` file:
 
 Run those command in the 
 ```bash
