@@ -46,6 +46,45 @@ sed -i '' "s|aes_key.*|aes_key\: YOUR_NEW_ENCRYPTION_KEY|" values.yaml
 
 Replace `YOUR_NEW_ENCRYPTION_KEY` with the encryption key generated in step 1.
 
+## Disabling Redis and PostgreSQL
+
+The MicroKit Helm chart enables Redis and PostgreSQL components by default. If you want to use your own Postgres/Redis , you can adjust the `values.yaml` file as follows:
+
+### Disabling Redis:
+
+To disable Redis, set the `redis.enabled` value to `false` in the `values.yaml` file:
+
+Please be aware that you still need to specify Redis/PostgreSQL parameters for your Redis/PostgreSQL instance.
+
+
+```yaml
+redis:
+  enabled: false
+  host: REDIS_HOSTNAME
+  port: REDIS_PORT
+  password: REDIS_PASSWORD
+```
+Replace `REDIS_HOSTNAME`, `REDIS_PORT`, and `REDIS_PASSWORD` with your desired Redis configuration.
+
+### Disabling PostgreSQL:
+
+To disable PostgreSQL, set the `postgresql.enabled` value to `false` in the `values.yaml` file:
+
+```yaml
+postgres:
+  enabled: false
+  username: DB_USER
+  dbhost: DB_HOST
+  password: DB_PASSWORD 
+  dbname: DB_NAME
+```
+
+
+
+Replace `DB_HOST`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` with your desired PostgreSQL configuration.
+
+
+
 ## Deploying MicroKit with Customized Values
 
 Once you have customized the values in the `values.yaml` file, you can deploy the MicroKit application using the Helm chart with your custom configurations. Use the following command:
