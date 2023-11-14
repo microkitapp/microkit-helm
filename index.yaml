@@ -2,8 +2,8 @@ apiVersion: v1
 entries:
   microkit:
   - apiVersion: v2
-    appVersion: 0.0.6-alpah
-    created: "2023-10-31T08:27:09.892586+02:00"
+    appVersion: 0.0.8-alpah
+    created: "2023-11-14T19:14:37.073831+02:00"
     dependencies:
     - condition: postgres.enabled
       name: postgres
@@ -14,10 +14,10 @@ entries:
       repository: ""
       version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: 5b0f2b07ffee9b6195b57076d4e15b7b1ea93ad6301770014db10ed887e7148f
+    digest: bb8efc4fcea64472928ccc14354094232bdba1e0406ed4e6611152df79651dde
     name: microkit
     type: application
     urls:
-    - microkit-0.1.4.tgz
-    version: 0.1.4
-generated: "2023-10-31T08:27:09.891412+02:00"
+    - microkit-0.1.5.tgz
+    version: 0.1.5
+generated: "2023-11-14T19:14:37.073058+02:00"
